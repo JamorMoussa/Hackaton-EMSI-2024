@@ -25,7 +25,25 @@ class Model:
         with open(model_path, "rb") as f:
             model = pk.load(f)
 
-        return model 
+        return model
+    
+
+class LoadLabelEncoder:
+
+    def from_pretrained():
+        return LoadLabelEncoder._get_label_encoder() 
+
+    
+    @staticmethod
+    def _get_label_encoder():
+
+        model_path = os.path.join(MODELS_PATH, "label_encoding.pkl")
+
+        with open(model_path, "rb") as f:
+            model = pk.load(f)
+
+        return model
+
 
 
 
